@@ -3,6 +3,7 @@
     width: 300px;            
     padding: 20px; 
     box-sizing: border-box; 
+    height: 300px;
 }
 .catagory h2 { 
     font-size: 21px; 
@@ -37,4 +38,5 @@
     display: flex;
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
+    
 }

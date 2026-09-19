@@ -9,7 +9,7 @@ export const CatagoryInfos=[
         imgLink:img1
     },
     {
-        title:"Discover fashion trend",
+        title:"fashion trend",
         name:"women's clothing",
         imgLink:img2
     },
