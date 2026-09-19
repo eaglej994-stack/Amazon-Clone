@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { SlLocationPin } from "react-icons/sl";
@@ -12,9 +13,9 @@ function Header() {
             <div className={classes['header-container']}>
                 <div className={classes['logo-container']}>
                     {/* logo */}
-                <a href="/">
+                <Link to="/">
                     <img src="https://pngimg.com/uploads/amazon/amazon_PNG25.png" alt="amazon-logo" />
-                </a>
+                </Link>
                 {/* delivery */}
                 <span>
                    <SlLocationPin />
@@ -36,29 +37,29 @@ function Header() {
                 {/* right side link */}
                 <div>
                     <div className={classes['order-container']}>
-                        <a href="" className={classes['language']}>
+                        <Link to="" className={classes['language']}>
                             <img src="https://www.shutterstock.com/image-vector/united-states-flag-vector-graphics-600w-2382611959.jpg" alt="" />
                             <select>
                                 <option value="">En</option>
                             </select>
-                        </a>
+                        </Link>
                         <div className={classes['three-components']}>
                             {/* three components */}
-                            <a href="">
+                            <Link to="">
                                 <div>
                                     <p>Sign In</p>
                                     <span>Acconunt & Lists</span>
                                 </div>
-                            </a>
+                            </Link>
                             {/* orders */}
-                            <a href="">
+                            <Link to="/order">
                                 <p>Returns</p>
                                 <span>$Order</span>
-                            </a >
-                           <a href="" className={classes['cart']}>
+                            </Link>
+                           <Link to="/cart" className={classes['cart']}>
                                 <FaShoppingCart size={35} />
                                 <span>0</span>                       
-                           </a>
+                           </Link>
                         </div>
                     </div>
                 </div>
