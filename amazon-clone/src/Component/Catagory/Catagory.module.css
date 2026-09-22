@@ -4,6 +4,7 @@
     padding: 20px; 
     box-sizing: border-box; 
     height: 300px;
+    background-color: rgba(224, 240, 254, 0.573);;
 }
 .catagory h2 { 
     font-size: 21px; 
