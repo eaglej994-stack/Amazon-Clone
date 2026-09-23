@@ -1,0 +1,74 @@
+.logIn{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logIn img{
+    margin: 30px auto;
+    object-fit: contain;
+    width: 200px;
+    margin-bottom: -30;
+}
+
+.login-container{
+    width: 350px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    padding: 20px;
+}
+.login-container h1{
+    font-size: 25px;
+    margin: 20px;
+}
+.login-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.login-container form div{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 100%;
+}
+.login-container form input{
+    margin-bottom: 10px;
+    padding: 8px 0;
+    width: 100%;
+    border: none;
+    background-color: rgba(237, 244, 251, 0.573);
+    border-bottom: 2px solid;
+    box-sizing: border-box;
+    outline: none;
+
+}
+.signin-btn{
+    border:none;
+    /* outline: none; */
+    background-color: rgba(237, 244, 251, 0.573);
+    cursor: pointer;
+    color: rgb(37, 83, 234);
+    padding: 7px;
+}
+.signin-btn:hover{
+    color: orange;
+    
+
+}
+.signUp{
+    width: 100%;
+    border: none;
+    background-color: rgba(237, 244, 251, 0.573);
+    color: orange;
+    cursor: pointer;
+    padding: 10px 0;
+}
+.signUp:hover{
+    color: rgb(37, 83, 234);
+}
+.description{
+    font-size: 12px;
+    color: rgba(74, 73, 73, 0.416);
+}

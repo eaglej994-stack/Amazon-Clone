@@ -6,10 +6,11 @@ import { SlLocationPin } from "react-icons/sl";
 import classes from './Header.module.css'
 import LowerHeader from './LowerHeader';
 import { DataContext } from '../DataProvider/DataPorvider';
-
+import Auth from '../../Pages/Auth/Auth';
+import { auth } from '../../Utility/FireBase';
 function Header() {
 
-    const [{ basket }, dispatch]=useContext(DataContext)
+    const [{ user,basket }, dispatch]=useContext(DataContext)
     const totalItem=basket?.reduce((amount,item)=>{
         return item.amount+amount;
     },0)
@@ -52,11 +53,26 @@ function Header() {
                         </Link>
                         <div className={classes['three-components']}>
                             {/* three components */}
-                            <Link to="">
+                            <Link to={!user &&"/auth"}>
                                 <div>
-                                    <p>Sign In</p>
-                                    <span>Acconunt & Lists</span>
+                                    {
+                                        user?(
+                                            <>
+                                            <p>Hello {user?.email?.split('@')[0]}</p>
+                                            <span onClick={()=>auth.signOut()}>Sing Out</span>
+                                            </>
+                                        ):(
+                                            <>
+                                                <p>Sign In</p>
+                                                <span>Acconunt & Lists</span>
+                                            </>
+
+                                        )
+                                    }
+                                    
+                                    
                                 </div>
+                                
                             </Link>
                             {/* orders */}
                             <Link to="/order">

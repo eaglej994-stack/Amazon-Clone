@@ -1,10 +1,30 @@
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import './App.css'
 import Routing from './Router'
-
-
+import { DataContext } from './Component/DataProvider/DataPorvider'
+import { Type } from './Utility/action.type'
+import { auth } from './Utility/FireBase'
 function App() {
   const [count, setCount] = useState(0)
+  const [{user},dispatch]=useContext(DataContext)
+  useEffect(()=>{
+    auth.onAuthStateChanged((authUser)=>{
+      if(authUser){
+        console.log(authUser)
+        dispatch({
+          Type:Type.SET_USER,
+          user:authUser
+        })
+      }
+      else{
+        dispatch({
+          Type:Type.SET_USER,
+          user:null
+        })
+      }
+    })
+
+  })
 
   return (
     <>
